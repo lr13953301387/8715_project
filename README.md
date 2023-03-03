@@ -1,4 +1,4 @@
-# 8715_project
+# International collaborate on hand-writing project
 
 TODO:
   1: image preprocess
