@@ -30,7 +30,8 @@ Improvement of feature extraction techniques or machine learning algorithms to i
 Deploying the model once achieves satisfactory results.
 
 
-### 2. Workspace and Communication channels
+### 2. Workspace and Communication channels:
+
 Here is our group’s landing page: https://docs.google.com/document/d/1IfB7Yy_RHFtP7vITMqCr6VszqwX8z4nqkPvJ8s6wOA0/edit
  
 GitHub repository: https://github.com/lr13953301387/8715_project
