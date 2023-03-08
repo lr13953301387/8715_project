@@ -1,5 +1,19 @@
 # 8715_project
 
+Here is our group’s landing page: https://docs.google.com/document/d/1IfB7Yy_RHFtP7vITMqCr6VszqwX8z4nqkPvJ8s6wOA0/edit
+ 
+GitHub repository: https://github.com/lr13953301387/8715_project
+Miro:  https://miro.com/app/board/uXjVPjUkjFU=/?share_link_id=70743626073
+ 
+Statement of Work(also linked within landing page): https://docs.google.com/document/d/1EtdTE8EcNiLc0zZhhfSrFLprn_pdXndhCRASWU9sTWw/edit?pli=1#heading=h.rp8cc29r2wlp
+ 
+project management tools: GitHub branches, discord, and Slack(previously)
+ 
+Communication channels: discord #general https://discord.com/channels/1080816431790309417/1080816431790309420, discord #announcement https://discord.com/channels/1080816431790309417/1080825219163365376
+And previously on Slack: https://anutechlaunch-ye91222.slack.com/archives/C04QZCV0F7W
+
+MileStones and 
+
 1.3.1 Data preparations of the 300 digital version of historical artifacts
 
 Standardizing the files and images:
