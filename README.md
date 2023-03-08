@@ -1,24 +1,10 @@
 # 8715_project
 
-Here is our group’s landing page: https://docs.google.com/document/d/1IfB7Yy_RHFtP7vITMqCr6VszqwX8z4nqkPvJ8s6wOA0/edit
- 
-GitHub repository: https://github.com/lr13953301387/8715_project
-
-Miro: https://miro.com/app/board/uXjVPjUkjFU=/?share_link_id=70743626073
- 
-Statement of Work(also linked within landing page): https://docs.google.com/document/d/1EtdTE8EcNiLc0zZhhfSrFLprn_pdXndhCRASWU9sTWw/edit?pli=1#heading=h.rp8cc29r2wlp
- 
-project management tools: GitHub branches, discord, and Slack(previously)
- 
-Communication channels: 
-Workspace on discord #general channel: https://discord.com/channels/1080816431790309417/1080816431790309420, 
-discord #announcement channel: https://discord.com/channels/1080816431790309417/1080825219163365376
-
-And workspace on slack(prev): https://anutechlaunch-ye91222.slack.com/archives/C04QZCV0F7W
 
 
 
-MileStones and Current Objective:
+
+### MileStones and Current Objective:
 
 1.3.1 Data preparations of the 300 digital version of historical artifacts
 
@@ -43,3 +29,20 @@ Evaluate model performance on test dataset
 Improvement of feature extraction techniques or machine learning algorithms to improve the model’s performance.
 Deploying the model once achieves satisfactory results.
 
+
+
+Here is our group’s landing page: https://docs.google.com/document/d/1IfB7Yy_RHFtP7vITMqCr6VszqwX8z4nqkPvJ8s6wOA0/edit
+ 
+GitHub repository: https://github.com/lr13953301387/8715_project
+
+Miro: https://miro.com/app/board/uXjVPjUkjFU=/?share_link_id=70743626073
+ 
+Statement of Work(also linked within landing page): https://docs.google.com/document/d/1EtdTE8EcNiLc0zZhhfSrFLprn_pdXndhCRASWU9sTWw/edit?pli=1#heading=h.rp8cc29r2wlp
+ 
+project management tools: GitHub branches, discord, and Slack(previously)
+ 
+Communication channels: 
+Workspace on discord #general channel: https://discord.com/channels/1080816431790309417/1080816431790309420, 
+discord #announcement channel: https://discord.com/channels/1080816431790309417/1080825219163365376
+
+And workspace on slack(prev): https://anutechlaunch-ye91222.slack.com/archives/C04QZCV0F7W
