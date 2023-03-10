@@ -15,9 +15,9 @@
 The files are given in a mix of file extensions (pdf, JFIF, JPEG, jpg). The challenging bit is to understand the given files and how to preprocess the images with computer vision tools(potentially to be done with OpenCV python library) to standardize the size (Character Detection), format and orientation. Further image enhancement techniques can be applied such as normalization, binarization and noise reduction to improve the quality of the images.
 
 for the image processing bit, our main goal is to have the image to be read 
-- [ ] a) in greyscale, 
+- [X] a) in greyscale, 
 - [ ] b) perform noise reduction, 
-- [ ] c) perform normalization so that pixel values are in range of 0-1 or 0-255,
+- [X] c) perform normalization so that pixel values are in range of 0-1 or 0-255,
 - [ ] d) the main body of the leaflet to be centre-cropped with the correct orientation,
 - [ ] e) finally standardize the size of all images(i.e. 32x32).
 
