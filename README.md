@@ -47,4 +47,3 @@ Workspace on discord #general channel: https://discord.com/channels/108081643179
 discord #announcement channel: https://discord.com/channels/1080816431790309417/1080825219163365376
 
 And workspace on slack(prev): https://anutechlaunch-ye91222.slack.com/archives/C04QZCV0F7W
-
