@@ -10,7 +10,7 @@ if __name__ == "__main__":
     #print(newdir)
     if (os.path.exists(newdir) == True):
 
-        shutil.rmtree(newdir)
+        shutil.rmtree(newdir) #delet the current split folder
         os.mkdir(newdir)
     else:
         os.mkdir(newdir)

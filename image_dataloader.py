@@ -10,7 +10,8 @@ class CustomDataset(torch.utils.data.Dataset):
     def __init__(self, data_dir, transform):
         self.data = []
         self.targets = []
-        for filename in os.listdir(data_dir):
+        self.length=len(os.listdir(data_dir))
+        for filename in os.listdir(data_dir)[0:self.length-1]:
             # label_dir = os.path.join(data_dir, label)
             # for filename in os.listdir(label_dir):
             self.data.append(os.path.join(data_dir,filename))
