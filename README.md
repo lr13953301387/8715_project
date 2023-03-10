@@ -8,7 +8,7 @@
 
 TODO: 
 
-[]1.3.1 Data preparations of the 300 digital version of historical artifacts
+-[ ] 1.3.1 Data preparations of the 300 digital version of historical artifacts
 
 Standardizing the files and images:
 
