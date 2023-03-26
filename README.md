@@ -42,13 +42,13 @@ Deploying the model once achieves satisfactory results.
 
 Here is our group’s landing page: https://docs.google.com/document/d/1IfB7Yy_RHFtP7vITMqCr6VszqwX8z4nqkPvJ8s6wOA0/edit
  
-GitHub repository: https://github.com/lr13953301387/8715_project
+Google Drive:https://drive.google.com/drive/folders/1hecIuxT4ad-6tQBP7q64SHWG3DRKsFKW
 
 Miro: https://miro.com/app/board/uXjVPjUkjFU=/?share_link_id=70743626073
  
 Statement of Work(also linked within landing page): https://docs.google.com/document/d/1EtdTE8EcNiLc0zZhhfSrFLprn_pdXndhCRASWU9sTWw/edit?pli=1#heading=h.rp8cc29r2wlp
  
-project management tools: GitHub branches, discord, and Slack(previously)
+project management tools: Mondays,GitHubbranches, discord, and Slack(previously)
  
 Communication channels: 
 
