@@ -1,4 +1,4 @@
-# 8715_project
+# International collaborate on hand-writing project
 
 
 
@@ -42,6 +42,8 @@ Deploying the model once achieves satisfactory results.
 ### 2. Workspace and Communication channels:
 
 Here is our group’s landing page: https://docs.google.com/document/d/1IfB7Yy_RHFtP7vITMqCr6VszqwX8z4nqkPvJ8s6wOA0/edit
+ 
+Here are our tasks and plans: https://international422015.monday.com/boards/4196840455
  
 GitHub repository: https://github.com/lr13953301387/8715_project
 
