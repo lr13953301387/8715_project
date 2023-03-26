@@ -38,7 +38,6 @@ Data preparation: split each image(by paragraph) into images that only contains 
 Improvement of feature extraction techniques or machine learning algorithms to improve the model’s performance.
 Deploying the model once achieves satisfactory results.
 
-
 ### 2. Workspace and Communication channels:
 
 Here is our group’s landing page: https://docs.google.com/document/d/1IfB7Yy_RHFtP7vITMqCr6VszqwX8z4nqkPvJ8s6wOA0/edit
@@ -53,8 +52,7 @@ project management tools: GitHub branches, discord, and Slack(previously)
  
 Communication channels: 
 
-Workspace on discord #general channel: https://discord.gg/FKX85jvkdy, 
-discord #announcement channel: https://discord.gg/xeT9YqpHyn
+discord channel: [https://discord.gg/FKX85jvkdy,](https://discord.gg/sBrUTEFzvF) 
 
 
 And workspace on slack(prev): https://anutechlaunch-ye91222.slack.com/archives/C04QZCV0F7W
