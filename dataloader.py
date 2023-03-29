@@ -1,12 +1,22 @@
+import math
 import os
 import pickle
 import numpy as np
+from PIL import Image
 from scipy import misc
 import torch.utils.data as data
 import torch
-from torchvision.transforms import Compose, ToTensor
+from torchvision import transforms
 import random
 import imageio
+import cv2 as cv
+
+transformm=transforms.Compose([
+    transforms.ToTensor(),
+    transforms.Resize([64, 128]),
+    transforms.Normalize((0.5),(0.5)),
+
+    ])
 
 class DatasetFromFolder(data.Dataset):
         def __init__(self,dataset,foldername,labelfolder,imgtype='png',scale_size=(64,128),
@@ -19,7 +29,7 @@ class DatasetFromFolder(data.Dataset):
                 self.scale_size = scale_size
                 self.folder = foldername
                 self.dataset = dataset
-                
+                self.transform=transformm
                 if self.dataset == 'CERUG-EN':
                     self.cerug = True
                 else:
@@ -76,7 +86,7 @@ class DatasetFromFolder(data.Dataset):
                 if self.cerug:
                     return fname.split('_')[0]
                 else:
-                    return fname.split('-')[0]
+                    return fname.split('-')[0][1:3]
         
         # get all image list 
         def _get_image_list(self,folder):
@@ -87,11 +97,12 @@ class DatasetFromFolder(data.Dataset):
                                 imglist.append(img)
                 return imglist
         
-        def transform(self):
-                return Compose([ToTensor(),])
+
         
         def resize(self,image):
                 h,w = image.shape[:2]
+                #print("h :", h)
+                #print("w" ,w)
                 ratio_h = float(self.scale_size[0])/float(h)
                 ratio_w = float(self.scale_size[1])/float(w)
                 
@@ -105,16 +116,23 @@ class DatasetFromFolder(data.Dataset):
                 nh = int(ratio * h)
                 nw = int(ratio * w)
                 
-                imre = misc.imresize(image,(nh,nw))
-                
+                imre =cv.resize(image,(nh*h,nw*w))
+
                 imre = 255 - imre
                 ch,cw = imre.shape[:2]
                 if self.is_training:
                     new_img = np.zeros(self.scale_size)
                     dy = int((self.scale_size[0]-ch))
                     dx = int((self.scale_size[1]-cw))
-                    dy = random.randint(0,dy)
-                    dx = random.randint(0,dx)
+                    #print("dy ",dy)
+                    if dy<0:
+                        dy = random.randint(dy,0)
+                    else:
+                            dy = random.randint(0, dy)
+                    if dx<0:
+                        dx = random.randint(dx,0)
+                    else:
+                            dx = random.randint(0, dx)
                 else:
                     new_img = np.zeros(self.scale_size)
                     dy = int((self.scale_size[0]-ch)/2.0)
@@ -125,24 +143,28 @@ class DatasetFromFolder(data.Dataset):
                 #dx = int((self.scale_size[1]-cw)/2.0)
 
                 imre = imre.astype('float')
-                
-                new_img[dy:dy+ch,dx:dx+cw] = imre
+                #print(imre.shape)
+                #print("cw ", dx)
+                #print(type(imre))
+                #new_img[dy:dy+ch,dx:dx+cw] = imre
+                #print("cw ",dx+cw)
                 #new_img /= 256.0
                 #print(new_img.shape)
                 
-                return new_img,hfirst
+                return imre,hfirst
 
         
         def __getitem__(self,index):
                 
                 imgfile = self.imglist[index]
+                #print("type ",type(self.idx_tab))
                 writer = self.idx_tab[self._get_identity(imgfile)]
                 
-                image = misc.imread(self.folder + imgfile,mode='L')
-                image,hfirst = self.resize(image)
-                image = image / 255.0
+                image = cv.imread(self.folder + imgfile,-1)
+                #image,hfirst = self.resize(image)
+                #image = image / 255.0
 
-                image = self.transform()(image)
+                image = self.transform(image)
                 writer = torch.from_numpy(np.array(writer))
                 
                 return image,writer,imgfile

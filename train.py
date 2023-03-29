@@ -207,7 +207,7 @@ class DeepWriter_Train:
     
     def checkpoint(self,epoch):
         model_out_path = self.model_dir + '/' + self.modelfile + '-model_epoch_{}.pth'.format(epoch)
-        torch.save(self.model.state_dict(),model_out_path)
+        torch.save(self.model,model_out_path)
     
     
     def load_model(self,epoch):
@@ -225,7 +225,7 @@ class DeepWriter_Train:
              
             self.train(epoch)
             self.checkpoint(epoch)
-            self.test(epoch)
+            #self.test(epoch)
             self.scheduler.step()
         
     def accuracy(self,output,target,topk=(1,)):
