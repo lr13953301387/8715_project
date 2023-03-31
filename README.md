@@ -40,8 +40,17 @@ Deploying the model once achieves satisfactory results.
 
 ### 2. Workspace and Communication channels:
 
-Here is our group’s landing page: https://docs.google.com/document/d/1IfB7Yy_RHFtP7vITMqCr6VszqwX8z4nqkPvJ8s6wOA0/edit
- 
+OLD landing page: https://docs.google.com/document/d/1IfB7Yy_RHFtP7vITMqCr6VszqwX8z4nqkPvJ8s6wOA0/edit
+
+**Below is the link to the NEW landing page and the credentials necessary to log in and see the page.**
+
+**Landing page (Confluence): https://international-japanese-collab.atlassian.net/wiki/spaces/LP/overview**
+
+**Username: theinternationalconfluence@gmail.com**
+
+**Password: confluence321**
+
+-----------------
 Google Drive:https://drive.google.com/drive/folders/1hecIuxT4ad-6tQBP7q64SHWG3DRKsFKW
 
 Miro: https://miro.com/app/board/uXjVPjUkjFU=/?share_link_id=70743626073
