@@ -159,15 +159,14 @@ class DeepWriter_Train:
         if not during_train:
             self.load_model(epoch)
 
-        top1 = 0
-        top5 = 0
+
         ntotal=0
         dummy_writer = -1
         for iteration,batch in enumerate(self.testing_data_loader,1):
             inputs = batch[0].to(self.device).float()
             target = batch[1].to(self.device).long()
             logits_list,logits = self.model(inputs)
-            #logits = self.model(inputs) Uncomment when Using SA-Net
+            #logits = self.model(inputs) #Uncomment when Using SA-Net
 
             for n in range(logits.shape[0]):
                 with torch.no_grad():
@@ -181,9 +180,7 @@ class DeepWriter_Train:
             
 
             logist = logits/3 
-            res = self.accuracy(logits,target,topk=(1,5))
-            top1 += res[0]
-            top5 += res[1]
+
             
             ntotal += inputs.size(0)
 
@@ -193,13 +190,12 @@ class DeepWriter_Train:
             if writer_page==i:
                 page_acc +=1
 
-        top1 /= float(ntotal)
-        top5 /= float(ntotal)
+
         page_acc /= float(self.page.shape[0])
-        print('Testing on epoch: %d has accuracy: top1: %.2f top5: %.2f'%(epoch,top1*100,top5*100))
+
         print('Testing pages on epoch: %d has page accuracy: top1: %.2f'%(epoch,page_acc*100))
         with open(self.logfile,'a') as fp:
-            fp.write('Testing epoch %d accuracy is: top1: %.2f top5: %.2f\n'%(epoch,top1*100,top5*100))
+
             fp.write(('Testing pages on epoch: %d has page accuracy: top1: %.2f'%(epoch,page_acc*100)))
     def check_exists(self,epoch):
         model_out_path = self.model_dir + '/' + self.modelfile + '-model_epoch_{}.pth'.format(epoch)
@@ -225,22 +221,24 @@ class DeepWriter_Train:
              
             self.train(epoch)
             self.checkpoint(epoch)
-            #self.test(epoch)
+            self.test(epoch)
             self.scheduler.step()
         
-    def accuracy(self,output,target,topk=(1,)):
+    def accuracy(self,output,target):
+        correct_count=0
+        total_count=len(output)
         with torch.no_grad():
-            maxk = max(topk)
-            _,pred = output.topk(maxk,1,True,True)
-            pred = pred.t()
-            correct = pred.eq(target.view(1, -1).expand_as(pred))
-            
-            res = []
-            for k in topk:
-                correct_k = correct[:k].view(-1).float().sum(0, keepdim=True)
-                res.append(correct_k.data.cpu().numpy())
+
+            #y_pred_tag = torch.round(torch.sigmoid(output))
+            #print("y_pred : ",output)
+            #print("yture ", target)
+            classifications = torch.argmax(output, dim=1)
+            predict = classifications
+            correct_count += (predict == output).sum()
+        correct_count = correct_count.cpu()
+        testing_accuracy = correct_count / total_count
         
-        return res
+        return testing_accuracy
                         
                         
                 
